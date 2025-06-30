@@ -1,0 +1,10 @@
+{
+  "name": "CAIMEOX/vlq",
+  "version": "0.1.0",
+  "readme": "README.md",
+  "repository": "https://github.com/CAIMEOX/vlq",
+  "license": "Apache-2.0",
+  "keywords": ["vlq", "encoding", "decoding"],
+  "description": "MoonBit library for encoding and decoding Variable Length Quantities",
+  "source": "src"
+}
