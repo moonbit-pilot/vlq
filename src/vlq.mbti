@@ -1,3 +1,4 @@
+// Generated using `moon info`, DON'T EDIT IT
 package "CAIMEOX/vlq"
 
 // Values
@@ -9,7 +10,7 @@ fn to_base64_vlq(Array[Int]) -> String
 
 fn to_vlq(Array[UInt]) -> Array[Byte]
 
-// Types and methods
+// Errors
 pub(all) suberror VlqError {
   Overflow
   IncompleteSequence
@@ -17,6 +18,8 @@ pub(all) suberror VlqError {
 }
 impl Eq for VlqError
 impl Show for VlqError
+
+// Types and methods
 
 // Type aliases
 
