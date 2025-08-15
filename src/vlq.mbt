@@ -84,7 +84,7 @@ fn encode_single_to_base64_vlq(number : Int) -> String {
     if vlq > 0 {
       digit = digit | 0b100000
     }
-    encoded = encoded + BASE64_CHARS.char_at(digit).to_string()
+    encoded = encoded + BASE64_CHARS.get_char(digit).unwrap().to_string()
   }
   encoded
 }
@@ -126,7 +126,7 @@ pub fn from_base64_vlq(s : String) -> Array[Int] raise VlqError {
     let mut continuation = true
     while continuation {
       guard i < len else { raise IncompleteSequence }
-      let char = s.char_at(i)
+      let char = s.get_char(i).unwrap()
       i = i + 1
       match get_base64_map().get(char) {
         None => raise InvalidBase64Character(char)
